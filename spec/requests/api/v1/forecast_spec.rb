@@ -9,7 +9,7 @@ RSpec.describe 'Forecast Page', :vcr do
       forecast_params = {location: "denver,co"}
       headers = {"CONTENT_TYPE": "application/json", "ACCEPT": "application/json"}
       get "/api/v1/forecast", headers: headers, params: forecast_params  
-      forecast = JSON.parse(response.body, symbolize_name: true)[:data]
+      forecast = JSON.parse(response.body, symbolize_name: true)
     end
   end
 end
