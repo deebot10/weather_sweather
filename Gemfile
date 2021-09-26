@@ -40,6 +40,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'pry'
   gem 'fast_jsonapi'
+  gem 'securerandom'
 end
 
 group :development do
