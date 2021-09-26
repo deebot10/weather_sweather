@@ -6,7 +6,7 @@ RSpec.describe 'Background Page', :vcr do
     # end
     
     it 'Can request the Forecast by location' do
-      params = {topics: "denver,co"}
+      params = {query: "denver,co"}
       headers = {"CONTENT_TYPE": "application/json", "ACCEPT": "application/json"}
       get "/api/v1/backgrounds", headers: headers, params: params  
       background = JSON.parse(response.body, symbolize_name: true)

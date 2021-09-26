@@ -1,7 +1,7 @@
 class BackgroundService
   class << self
     def call_db(query)
-      response = conn.get("search/photos") do |r|
+      response = conn.get("/search/photos") do |r|
         r.params['query']     = query   
         r.params['client_id'] = ENV['client_id']
         r.params['per_page']  = 1
