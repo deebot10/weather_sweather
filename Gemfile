@@ -40,6 +40,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'pry'
   gem 'fast_jsonapi'
+  gem 'securerandom'
 end
 
 group :development do
@@ -57,6 +58,7 @@ group :test do
   gem 'launchy'
   gem 'orderly'
   gem 'vcr'
+  gem 'webmock'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

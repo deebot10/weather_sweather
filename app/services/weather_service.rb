@@ -2,10 +2,11 @@ class WeatherService
   class << self
     def call_db(location)
       response = conn.get("/data/2.5/onecall") do |r|
-        r.params['lat']    = location[:lat]
-        r.params['lon']    = location[:lng]
-        r.params['appid']  = ENV['weather_api']
+        r.params['lat']     = location[:lat]
+        r.params['lon']     = location[:lng]
+        r.params['appid']   = ENV['weather_api']
         r.params['exclude'] = 'minutely,alerts'
+        r.params['units']   = 'imperial'
       end
       parse_data(response)  
     end
