@@ -4,19 +4,30 @@ class LibraryFacade
       info = ForecastFacade.find_forecast(location)
       current_weather = info.current_weather
       books = LibraryService.call_db(location, quantity)  
-      city_books = format_books(books)
+      city_books = format_books(books[:docs])
+      format = format_return(location, city_books, books, current_weather) 
+      LibraryInfo(format)
     end  
     
-    def self.format_books(books)
+    def format_books(books)
       books.map do |book|
-        require 'pry'; binding.pry
         {
+          isbn: book[:isbn],
+          title: book[:title],
+          publisher: book[:publisher]
         }  
       end    
     end
 
-    def self.format_details
-      
+    def format_return(location, city_books, books, current_weather)
+      {
+        destination: location, 
+        forecast: { summary: current_weather.conditions, 
+                    tempature: "#{current_weather.temp} F" 
+        },
+        total_books_found: books[:numFound],
+        books: city_books
+      }  
     end
   end
 end
