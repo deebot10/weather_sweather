@@ -6,7 +6,7 @@ RSpec.describe 'Login Page', :vcr do
       @headers = {"CONTENT_TYPE": "application/json", "ACCEPT": "application/json"}
     end
     
-    it 'Can request the User creation' do
+    xit 'Can request the User creation' do
       body = {
               "email": "whatever@example.com",
               "password": "password",
