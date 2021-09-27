@@ -3,7 +3,7 @@ class MapService
     def call_db(location)
       response = conn.get("/geocoding/v1/address") do |r|
         r.params['location'] = location
-        r.params['key']  = ENV['map_api']
+        r.params['key']      = ENV['map_api']
       end
       parse_data(response)  
     end
