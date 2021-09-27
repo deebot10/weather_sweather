@@ -6,7 +6,7 @@ class LibraryFacade
       books = LibraryService.call_db(location, quantity)  
       city_books = format_books(books[:docs])
       format = format_return(location, city_books, books, current_weather) 
-      LibraryInfo(format)
+      LibraryInfo.new(format)
     end  
     
     def format_books(books)
