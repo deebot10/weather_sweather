@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       resources :backgrounds, only: [:index] 
       resources :users, only: [:create]
       resources :sessions
-      resources 'book_search'
+      resources 'book_search', :path => 'book-search'
       # get '/booksearch', to: 'book-search#index' 
     end
   end
