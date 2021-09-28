@@ -10,7 +10,7 @@ RSpec.describe 'Login Page', :vcr do
               "password_confirmation": "password"
       }
       post "/api/v1/users", headers: @headers, params: JSON.generate(body)
-      user = JSON.parse(response.body, symbolize_name: true)
+      @user = JSON.parse(response.body, symbolize_name: true)
     end
     
     it 'Can request the User creation' do
@@ -19,8 +19,10 @@ RSpec.describe 'Login Page', :vcr do
               "password": "password",
       }
       post "/api/v1/sessions", headers: @headers, params: JSON.generate(body)  
-      user = JSON.parse(response.body, symbolize_name: true)
-      reg_user = User.find(user[:id].to_i)
+      re_user = JSON.parse(response.body, symbolize_names: true)
+
+      expect(re_user[:data][:attributes][:email]).to eq('whatever@example.com')
+      expect(re_user[:data][:attributes][:api_key]).to eq(@user['data']['attributes']['api_key'])
     end
   end
 end
