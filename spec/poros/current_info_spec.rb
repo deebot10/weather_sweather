@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe CurrentInfo do
   it 'exists' do
-    # represents the info on the right of the = sign
     attrs = {
               :dt=>1632791586,
               :sunrise=>1632747150,
