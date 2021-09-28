@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe BackgroundInfo do
   it 'exists' do
-    # represents the info on the right of the = sign
     attrs = {:id=>"A4RpHR83luM",
                       :created_at=>"2021-05-01T04:12:54-04:00",
                       :updated_at=>"2021-09-27T03:26:24-04:00",
