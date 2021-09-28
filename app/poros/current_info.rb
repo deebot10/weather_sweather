@@ -16,7 +16,7 @@ class CurrentInfo
     @sunset     = Time.at(info[:sunset]).strftime('%F %T %:z')
     @temp       = info[:temp] 
     @fl         = info[:feels_like]
-    @humidty    = info[:humidty]
+    @humidity    = info[:humidity]
     @uvi        = info[:uvi]
     @visibility = info[:visibility]
     @conditions = info[:weather][0][:description]
