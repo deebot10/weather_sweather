@@ -21,17 +21,11 @@
 | Development | Testing       | Gems          |
 |   :----:    |    :----:     |    :----:     |
 | Ruby 2.7.2  | RSpec         | SimpleCov     |
-| Rails       | Rubocop       | Pry           |
-| HTML5       |               | Capybara      |
-| CSS3        |               | ShouldaMatcher|
-| Github      |               | Launchy       |
-| Atom        |               | Orderly       |
-| VS Code     |               | PostgresQL    |
-| Postman     |               | Postico       |
-| Travis      |               | Faker         |
-|             |               | Factorybot    |
+| Rails       |               | Pry           |
+| Github      |               | ShouldaMatcher|
+| Vs Code     |               | Launchy       |
+| Postman     |               | SecureRandom  |
 |             |               | Faraday       |
 |             |               | Figaro        |
-|             |               | Bcrypt        |
-|             |               | VCR           |
-|             |               | Bootstrap     |
+|             |               | VCR           | 
+|             |               | Webmock       |
