@@ -15,7 +15,7 @@ RSpec.describe 'Registration Page', :vcr do
       post "/api/v1/users", headers: @headers, params: JSON.generate(body)  
       user = JSON.parse(response.body, symbolize_name: true)
       user = User.last
-     
+    
       email = 'whatever@example.com'
     end
   end

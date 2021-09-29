@@ -16,8 +16,8 @@ RSpec.describe 'Login Page', :vcr do
     it 'Can request the User creation' do
       body = {
               "email": "whatever@example.com",
-              "password": "password",
-      }
+              "password": "password"
+             }
       post "/api/v1/sessions", headers: @headers, params: JSON.generate(body)  
       re_user = JSON.parse(response.body, symbolize_names: true)
 

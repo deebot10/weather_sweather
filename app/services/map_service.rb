@@ -8,6 +8,15 @@ class MapService
       parse_data(response)  
     end
 
+    def find_route(location, destination)
+      response = conn.get("/directions/v2/route") do |r|
+        r.params['key']  = ENV['map_api']
+        r.params['from'] = location
+        r.params['to']   = destination
+      end
+      parse_data(response)
+    end
+
     private
 
     def conn
