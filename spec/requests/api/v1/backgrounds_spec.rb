@@ -11,7 +11,6 @@ RSpec.describe 'Background Page', :vcr do
     end
 
      it 'sad path: Cannot return a background' do
-      # params = {query: "denver,co"}
       headers = {"CONTENT_TYPE": "application/json", "ACCEPT": "application/json"}
       get "/api/v1/backgrounds", headers: headers  
       background = JSON.parse(response.body, symbolize_name: true)
