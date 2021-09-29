@@ -22,5 +22,17 @@ RSpec.describe 'RoadTrip Page', :vcr do
       post "/api/v1/road_trip", headers: @headers, params: JSON.generate(body)  
       info = JSON.parse(response.body, symbolize_names: true)
     end
+
+    it 'Sad Path: Cannot request the User creation' do
+      body = {
+              "origin": "Denver,CO",
+              "destination": "Pueblo,CO",
+              "api_key": 'jgn983hy48thw9begh98h4539h4'
+             }
+      post "/api/v1/road_trip", headers: @headers, params: JSON.generate(body)  
+      info = JSON.parse(response.body, symbolize_names: true)
+
+      expect(info[:error]).to eq('Invalid API key')
+    end
   end
 end
