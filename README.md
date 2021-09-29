@@ -4,6 +4,7 @@
 - [About this Project](#about-this-project)
 - [Tools Used](#tools-used)
 - [Schema](#schema)
+- [Endpoints](#endpoints)
 
 ## About This Project
 
