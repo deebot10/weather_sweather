@@ -1,24 +1,37 @@
-# README
+#Weather Sweater
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##Table of Contents
+- [About this Project](#about-this-project)
 
-Things you may want to cover:
+## About This Project
 
-* Ruby version
+###Learning Goals
+* Expose an API that aggregates data from multiple external APIs
+* Expose an API that requires an authentication token
+* Expose an API for CRUD functionality
+* Determine completion criteria based on the needs of other developers
+* Research, select, and consume an API based on your needs as a developer
 
-* System dependencies
+## Versions
+* Ruby 2.7.2
+* Rails 5.2.6
 
-* Configuration
+## Tools Used
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+| Development | Testing       | Gems          |
+|   :----:    |    :----:     |    :----:     |
+| Ruby 2.7.2  | RSpec         | SimpleCov     |
+| Rails       | Rubocop       | Pry           |
+| HTML5       |               | Capybara      |
+| CSS3        |               | ShouldaMatcher|
+| Github      |               | Launchy       |
+| Atom        |               | Orderly       |
+| VS Code     |               | PostgresQL    |
+| Postman     |               | Postico       |
+| Travis      |               | Faker         |
+|             |               | Factorybot    |
+|             |               | Faraday       |
+|             |               | Figaro        |
+|             |               | Bcrypt        |
+|             |               | VCR           |
+|             |               | Bootstrap     |
