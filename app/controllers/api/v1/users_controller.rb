@@ -5,8 +5,7 @@ class Api::V1::UsersController < ApplicationController
     user = User.new(user_params)
 
     if user.save
-      user.api_key = SecureRandom.hex
-      user.save
+      user.update(api_key: SecureRandom.hex)
       render json: UsersSerializer.new(user), status: 201
     else
       render json: { error: 'The password or email is invalid'}, status: 422  

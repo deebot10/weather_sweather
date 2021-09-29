@@ -21,9 +21,6 @@ RSpec.describe 'RoadTrip Page', :vcr do
              }
       post "/api/v1/road_trip", headers: @headers, params: JSON.generate(body)  
       info = JSON.parse(response.body, symbolize_names: true)
-
-      # expect(re_user[:data][:attributes][:email]).to eq('whatever@example.com')
-      # expect(re_user[:data][:attributes][:api_key]).to eq(@user['data']['attributes']['api_key'])
     end
   end
 end
